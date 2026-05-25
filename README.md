@@ -99,3 +99,9 @@ graph LR
 - **Joblets**: Contains reusable component logic.
 - **Poms**: Orchestrates the build process, including Docker image creation via the `fabric8-maven-plugin`.
 - **pyspark_jobs/**: PySpark conversions of Talend jobs with local MySQL testing infrastructure. See [`pyspark_jobs/README.md`](pyspark_jobs/README.md) for details.
+
+---
+
+### Spring Boot Migration
+
+This project is being migrated to Spring Boot 3.x (Java 17). See [`PLAYBOOK.md`](PLAYBOOK.md) for the phased migration plan and [`playbook/`](playbook/) for self-contained session prompts that can be executed in parallel Devin sessions.
