@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/analytics_dev?noDatetimeStringSync=true&useSSL=false
+    username: tadmin
+    password: changeme
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: always
+
+app:
+  job:
+    project: TALEND_AWS_DI_USECASE
+  email:
+    enabled: false
