@@ -98,3 +98,9 @@ graph LR
 - **Process**: Contains the `.item` and `.properties` files for ETL jobs.
 - **Joblets**: Contains reusable component logic.
 - **Poms**: Orchestrates the build process, including Docker image creation via the `fabric8-maven-plugin`.
+
+---
+
+### Spring Boot Migration
+
+This project is being migrated to Spring Boot 3.x (Java 17). See [`PLAYBOOK.md`](PLAYBOOK.md) for the phased migration plan and [`playbook/`](playbook/) for self-contained session prompts that can be executed in parallel Devin sessions.
