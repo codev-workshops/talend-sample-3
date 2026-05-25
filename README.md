@@ -98,6 +98,7 @@ graph LR
 - **Process**: Contains the `.item` and `.properties` files for ETL jobs.
 - **Joblets**: Contains reusable component logic.
 - **Poms**: Orchestrates the build process, including Docker image creation via the `fabric8-maven-plugin`.
+- **pyspark_jobs/**: PySpark conversions of Talend jobs with local test infrastructure. See [`pyspark_jobs/README.md`](pyspark_jobs/README.md).
 
 ---
 
