@@ -154,7 +154,7 @@ def run(argv=None):
         sep="|",
         header=True,
         schema=CUSTOMER_SCHEMA,
-        encoding="ISO-8859-15",
+        encoding="ISO-8859-1",
     )
 
     # 7. Trim all string columns (TRIMALL=true in Talend)
