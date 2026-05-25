@@ -8,6 +8,22 @@
   <packaging>pom</packaging>
   <name>TALEND_AWS_DI_USECASE Codes Master</name>
   <url>http://www.talend.org/</url>
+  <repositories>
+    <repository>
+      <id>talend-custom-libs-release</id>
+      <url>https://talend-update.talend.com/nexus/content/repositories/libraries/</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>talend-custom-libs-release</id>
+      <url>https://talend-update.talend.com/nexus/content/repositories/libraries/</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </pluginRepository>
+  </pluginRepositories>
   <modules>
     <module>code/routines</module>
     <module>jobs/joblets/jblt_load_context_0.1</module>
@@ -23,7 +39,8 @@
     <module>jobs/process/j_usecase_analytics_summary_0.1</module>
   </modules>
   <properties>
-    <signer.version>7.2.1</signer.version>
+    <signer.version>7.3.10</signer.version>
+    <talend.ci.version>7.3.10</talend.ci.version>
     <talend.project.name>TALEND_AWS_DI_USECASE</talend.project.name>
     <encoding>UTF-8</encoding>
     <talend.docker.tag>${project.version}</talend.docker.tag>
@@ -76,21 +93,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.talend.ci</groupId>
-        <artifactId>builder-maven-plugin</artifactId>
-        <version>7.2.1</version>
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>generate</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
   </build>
   <profiles>
     <profile>
@@ -191,7 +193,7 @@
           <plugin>
             <groupId>org.talend.ci</groupId>
             <artifactId>cloudpublisher-maven-plugin</artifactId>
-            <version>7.2.1</version>
+            <version>${talend.ci.version}</version>
             <executions>
               <execution>
                 <phase>deploy</phase>
@@ -215,6 +217,26 @@
       <properties>
         <maven.deploy.skip>false</maven.deploy.skip>
       </properties>
+    </profile>
+    <profile>
+      <id>talend-ci</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.talend.ci</groupId>
+            <artifactId>builder-maven-plugin</artifactId>
+            <version>${talend.ci.version}</version>
+            <executions>
+              <execution>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>generate</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 </project>
