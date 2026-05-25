@@ -69,7 +69,7 @@ graph LR
 
 | # | Session ID | Title | File | Prerequisites | Parallel Group | Status |
 |---|-----------|-------|------|---------------|----------------|--------|
-| 1 | phase-0 | Project Scaffolding | [`playbook/phase-0-scaffolding.md`](playbook/phase-0-scaffolding.md) | None | — | [ ] |
+| 1 | phase-0 | Project Scaffolding | [`playbook/phase-0-scaffolding.md`](playbook/phase-0-scaffolding.md) | None | — | [x] |
 | 2 | phase-1a | Config / Context Service | [`playbook/phase-1a-config-service.md`](playbook/phase-1a-config-service.md) | phase-0 | Group 1 | [ ] |
 | 3 | phase-1b | CSV Loader Jobs | [`playbook/phase-1b-csv-loader-jobs.md`](playbook/phase-1b-csv-loader-jobs.md) | phase-0 | Group 1 | [ ] |
 | 4 | phase-1c | Logging Service | [`playbook/phase-1c-logging-service.md`](playbook/phase-1c-logging-service.md) | phase-0 | Group 1 | [ ] |
