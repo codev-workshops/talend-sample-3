@@ -7,3 +7,15 @@ spring:
   sql:
     init:
       mode: always
+  mail:
+    host: localhost
+    port: 25
+
+app:
+  email:
+    enabled: false
+  mail:
+    smtp-host: localhost
+    port: 25
+    to: test@example.com
+    from: noreply@example.com
