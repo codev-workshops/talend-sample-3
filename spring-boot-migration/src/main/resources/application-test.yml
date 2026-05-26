@@ -7,3 +7,12 @@ spring:
   sql:
     init:
       mode: always
+  mail:
+    host: localhost
+    port: 2525
+
+app:
+  pipeline:
+    enabled: false
+  email:
+    enabled: false
